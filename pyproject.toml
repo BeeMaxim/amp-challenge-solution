@@ -33,7 +33,7 @@ url = "https://download.pytorch.org/whl/cu121"
 explicit = true
 
 [project.scripts]
-# AMP-Diffusion is strain-agnostic, so the baseline exposes the broad-spectrum entry point only.
+generate = "ampdiffusion_starter_kit.generate:main"
 generate_broad_spectrum = "ampdiffusion_starter_kit.generate:main"
 
 # The APEX scorer under apex/ (APEX-pathogen) is a SEPARATE uv project, invoked as an isolated
