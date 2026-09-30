@@ -431,11 +431,6 @@ def main():
 
     write_fasta(library, output)
 
-    # Temporary development-only top 100.
-    # This is NOT the final challenge ranking.
-    # top_placeholder = OUTPUT_DIR / "top.fasta"
-
-
     top_sequences, top_df = score_top(
         seqs=library,
         references=references,
@@ -460,8 +455,6 @@ def main():
     print(f"Library : {output}")
     print(f"Top-100 : {top_output}")
     print(f"Scores  : {OUTPUT_DIR / 'top_scores.csv'}")
-
-    # write_fasta(library[:100], top_placeholder)
 
     # -----------------------------
     # Statistics

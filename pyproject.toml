@@ -33,12 +33,12 @@ url = "https://download.pytorch.org/whl/cu121"
 explicit = true
 
 [project.scripts]
-generate = "ampdiffusion_starter_kit.generate:main"
-generate_broad_spectrum = "ampdiffusion_starter_kit.generate:main"
+generate = "src.generate:main"
+generate_broad_spectrum = "src.generate:main"
 
-# The APEX scorer under apex/ (APEX-pathogen) is a SEPARATE uv project, invoked as an isolated
-# subprocess from scoring.py — deliberately NOT a workspace member, so its pinned deps never
-# have to co-resolve with this project's stack.
+[tool.uv.build-backend]
+module-name = "src"
+module-root = ""
 
 [build-system]
 requires = ["uv_build>=0.9.18,<0.10.0"]
